@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detail</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+      <!-- Navbar -->
+   <nav class="bg-blue-600 p-4 text-white flex justify-between">
+      <div class="text-3xl font-bold">AI Blog Generator</div>
+      <div class="flex">
+        <a href="{% url 'bloglist' %}" class="text-xl font-semibold">All Blogs</a>
+        <p class="px-3">Welcome {{user.username}},</p>
+        <a href="{% url 'logout' %}" class="hover:underline">Logout</a>
+      </div>
+    </nav>
+    <!-- Main content of blog -->
+    <div class="container mx-auto mt-10 px-4 sm:px-0">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <section>
+                <h2 class="text-xl font-semibold mb-4">Blog Post Detail</h2>
+                <div class="border border-gray-300 p-4 rounded-lg">
+                    <h3 class="text-lg font-semibold">{{data.title}}</h3>
+                    <p class="text-gray-700">{{data.content}}</p>
+                    <hr class="border-gray-300 my-4">
+                    <h4 class="text-lg font-semibold">Youtube Title</h4>
+                    <p class="text-gray-700">{{data.title}}</p>
+                    <h4 class="text-lg font-semibold">Youtube Link</h4>
+                    <a href="#" class="text-blue-600 hover:underline">{{data.link}}</a>
+                    
+
+
+                </div>
+            </section>
+        </div>
+    </div>
+     <footer class="text-center p-4 text-black mt-6 ">
+        Developed By Bholi Ansari
+    </footer>
+</body>
+</html>
